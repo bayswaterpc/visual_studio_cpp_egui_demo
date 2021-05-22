@@ -1,5 +1,6 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+#include <iostream>
 #pragma comment(lib, "../egui_demo_lib/target/release/egui_demo_app_c_wrapper.lib")
 #pragma comment(lib, "userenv.lib")
 #pragma comment(lib, "ws2_32.lib")
@@ -11,12 +12,17 @@
 #pragma comment(lib, "Opengl32.lib")
 
 #include <iostream>
-#include "D:\Personal\BayswaterPC\Code\egui\egui_demo_app\src\egui_demo_app_c_wrapper.h"
+#include "../egui_demo_lib/src/egui_demo_app_c_wrapper.h";
+
 int main()
 {
+    int n;
     std::cout << "Hello World!\n";
+    std::cout << "The following egui demo crashes due to \"!\" i.e. never return type in eframe\n Type numeric to continue..";
+    std::cin >> n;
     start_egui_demo();
-    std::cout << "Finished successfully!\n";
+    std::cout << "\nSee doesn't reach : ";
+    std::cin >> n;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
