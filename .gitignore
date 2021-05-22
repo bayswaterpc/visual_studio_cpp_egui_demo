@@ -3,3 +3,4 @@ ConsoleApplication1/Debug
 ConsoleApplication/x64
 egui_demo_lib/target
 .vs
+bevy_egui_paneled_playground
