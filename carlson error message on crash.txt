@@ -1,0 +1,14 @@
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: HRException at memory location 0x0000000000BEADE8.
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: [rethrow] at memory location 0x0000000000000000.
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: HRException at memory location 0x0000000000BEADE8.
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: HRException at memory location 0x0000000000BEC328.
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: [rethrow] at memory location 0x0000000000000000.
+Exception thrown at 0x00007FFA007D4B89 in icad.exe: Microsoft C++ exception: HRException at memory location 0x0000000000BEC328.
+<mda:msg xmlns:mda="http://schemas.microsoft.com/CLR/2004/10/mda">
+  <!-- 
+       Attempting managed execution inside OS Loader lock. Do not attempt to run
+       managed code inside a DllMain or image initialization function since doing so
+       can cause the application to hang.
+   -->
+  <mda:loaderLockMsg break="true"/>
+</mda:msg>
