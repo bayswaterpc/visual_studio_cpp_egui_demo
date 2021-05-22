@@ -1,6 +1,6 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-#pragma comment(lib, "../egui_demo_lib/")
+#pragma comment(lib, "../egui_demo_lib/target/release/egui_demo_app_c_wrapper.lib")
 #pragma comment(lib, "userenv.lib")
 #pragma comment(lib, "ws2_32.lib")
 #pragma comment(lib, "Comctl32.lib")
