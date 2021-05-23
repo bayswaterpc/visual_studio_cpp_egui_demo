@@ -1,9 +1,7 @@
 // ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-
 #pragma comment(lib, "../egui_demo_lib/target/release/egui_demo_app_c_wrapper.lib")
 #pragma comment(lib, "../bevy_egui_paneled_playground/target/release/egui_paneled_playground.lib")
+#pragma comment(lib, "../egui_glium_pure/target/debug/egui_glium_pure_example_lib.lib")
 
 //Added for egui_demo_app_c_wrapper
 #pragma comment(lib, "userenv.lib")
@@ -30,17 +28,20 @@
 
 #include <iostream>
 #include "../egui_demo_lib/src/c_wrapper.h";
+#include "../egui_glium_pure/src/c_wrapper.h";
+
+
+//glslang importing troubles
 #include "../bevy_egui_paneled_playground/src/c_wrapper.h";
-
-
 #include "../glslang-master-windows-x64-Release/include/glslang/Include/glslang_c_interface.h";
 #include "../glslang-master-windows-x64-Release/include/glslang/Public/ShaderLang.h";
 
-int main()
-{
+int main() {
     int n;
     std::cout << "Hello World!\n";
 
+
+    egui_glium_pure_example_c_wrapper();
     std::cout << "Bevy egui app runs and closes no problem";
     std::cin >> n;
     //paneled_playground_c_wrapper();
@@ -50,6 +51,7 @@ int main()
     start_egui_demo();
     std::cout << "\nSee doesn't reach : ";
     std::cin >> n;
+    return 1;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

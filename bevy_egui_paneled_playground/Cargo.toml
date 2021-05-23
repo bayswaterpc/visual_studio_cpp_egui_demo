@@ -18,11 +18,11 @@ rand = "*"
 [lib]
 name = "egui_paneled_playground"
 #path = "src/lib.rs"
-crate-type = ["staticlib"]
+crate-type = ["staticlib", "cdylib", "rlib"]
 
-# [[bin]]
-# name = "egui_paneled_playground_app"
-# path = "src/main.rs"
+[[bin]]
+name = "egui_paneled_playground_app"
+path = "src/main.rs"
 
 
 # [package]

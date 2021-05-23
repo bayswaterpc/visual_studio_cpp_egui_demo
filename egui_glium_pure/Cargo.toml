@@ -1,0 +1,30 @@
+[package]
+name = "egui_glium_pure_example"
+version = "0.12.0"
+authors = ["Emil Ernerfeldt <emil.ernerfeldt@gmail.com>"]
+description = "Bindings for using egui natively using the glium library"
+edition = "2018"
+homepage = "https://github.com/emilk/egui"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/emilk/egui"
+categories = ["gui", "game-development"]
+keywords = ["glium", "egui", "gui", "gamedev"]
+
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+glium = "0.29"
+egui = "0.12.0"
+egui_glium = "0.12.0"
+
+[lib]
+name = "egui_glium_pure_example_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+
+[[bin]]
+name = "egui_glium_pure_example_app"
+path = "src/main.rs"

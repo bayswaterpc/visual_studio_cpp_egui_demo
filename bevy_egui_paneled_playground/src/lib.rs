@@ -27,6 +27,8 @@ pub fn run_app_main() {
     add_contributors(&mut app);
     add_snake(&mut app);
     app.run();
+
+    println!("Clean app exit...");
 }
 
 #[no_mangle]
