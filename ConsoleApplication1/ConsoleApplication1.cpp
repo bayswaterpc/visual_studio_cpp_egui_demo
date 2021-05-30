@@ -17,18 +17,17 @@
 #include "../egui_glium_pure/src/c_wrapper.h";
 
 int main() {
+    egui_glium_pure_example_c_wrapper();
     int n;
-    std::cout << "Hello World!\n";
+    std::cout << "Progress now we can close without crashing but rendered window stays in place!\nType numeric to continue..";
+    std::cin >> n;
 
-    std::cout << "The following egui demo crashes due to \"!\" i.e. never return type in eframe\n Type numeric to continue..";
+    std::cout << "The following egui demo crashes due to \"!\" i.e. never return type in eframe\nType numeric to continue..";
     std::cin >> n;
     start_egui_demo();
     std::cout << "\nSee doesn't reach : ";
     std::cin >> n;
 
-    std::cout << "Egui glium app has the same problem";
-    egui_glium_pure_example_c_wrapper();
-    std::cin >> n;
 
     return 1;
 }

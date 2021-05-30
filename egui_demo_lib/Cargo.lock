@@ -622,8 +622,6 @@ checksum = "ee2626afccd7561a06cf1367e2950c4718ea04565e20fb5029b6c7d8ad09abcf"
 [[package]]
 name = "eframe"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7d765b71f13f3268244328e3cef6437415dede275859905a90464b319fbc149"
 dependencies = [
  "egui",
  "egui_glium",
@@ -634,8 +632,6 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "788148861d80b87d28d64440a3d31cae190e50ccc3ea585597466d38428365d7"
 dependencies = [
  "epaint",
  "ron",
@@ -653,8 +649,6 @@ dependencies = [
 [[package]]
 name = "egui_demo_lib"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3866cc50a4f55dc75f037ec3c82262fcb6538e397f07c4d83509219789633578"
 dependencies = [
  "egui",
  "epi",
@@ -666,8 +660,6 @@ dependencies = [
 [[package]]
 name = "egui_glium"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a26238d26c1a1e03854afe79b9f6b2f116a30e017cbf14a4503bc50b80b7707c"
 dependencies = [
  "chrono",
  "copypasta",
@@ -685,8 +677,6 @@ dependencies = [
 [[package]]
 name = "egui_web"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9060de4015f23ec40fd373e34b91f5d6c6ccf3f4a2026ef12ea2195537db87c0"
 dependencies = [
  "egui",
  "epi",
@@ -702,8 +692,6 @@ dependencies = [
 [[package]]
 name = "emath"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3e73d6c8c70eadb71756fbbc3c303ab25e163b46b656886dd250de5636efea12"
 dependencies = [
  "serde",
 ]
@@ -724,8 +712,6 @@ dependencies = [
 [[package]]
 name = "epaint"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "80e2db640801230bdda80629bc3a063927a462f5eaf38a98da676954e78ccb99"
 dependencies = [
  "ahash",
  "atomic_refcell",
@@ -738,8 +724,6 @@ dependencies = [
 [[package]]
 name = "epi"
 version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "59c4f6cbede1fc8f836384f85295a59199a4825940abcc3a8a29cfe2e3c37583"
 dependencies = [
  "egui",
  "ron",

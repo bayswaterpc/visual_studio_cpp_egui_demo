@@ -1,5 +1,6 @@
 //! Example how to use pure `egui_glium` without [`epi`].
 use glium::glutin;
+use glium::glutin::platform::run_return::EventLoopExtRunReturn;
 
 fn create_display(event_loop: &glutin::event_loop::EventLoop<()>) -> glium::Display {
     let window_builder = glutin::window::WindowBuilder::new()
@@ -20,12 +21,12 @@ fn create_display(event_loop: &glutin::event_loop::EventLoop<()>) -> glium::Disp
 }
 
 pub fn egui_glium_pure_example() {
-    let event_loop = glutin::event_loop::EventLoop::with_user_event();
+    let mut event_loop = glutin::event_loop::EventLoop::with_user_event();
     let display = create_display(&&event_loop);
 
     let mut egui = egui_glium::EguiGlium::new(&display);
 
-    event_loop.run(move |event, _, control_flow| {
+    event_loop.run_return(move |event, _, control_flow| {
         let mut redraw = || {
             egui.begin_frame(&display);
 
@@ -52,6 +53,7 @@ pub fn egui_glium_pure_example() {
             let (needs_repaint, shapes) = egui.end_frame(&display);
 
             *control_flow = if quit {
+                println!("glutin::event_loop::ControlFlow::Exit");
                 glutin::event_loop::ControlFlow::Exit
             } else if needs_repaint {
                 display.gl_window().window().request_redraw();
@@ -91,12 +93,29 @@ pub fn egui_glium_pure_example() {
 
             glutin::event::Event::WindowEvent { event, .. } => {
                 egui.on_event(event, control_flow);
-                display.gl_window().window().request_redraw(); // TODO: ask egui if the events warrants a repaint instead
-            }
+                match control_flow {
+                    glutin::event_loop::ControlFlow::Exit => {
 
+                        println!("exiting");
+                        //display.gl_window().window().set_minimized(true);
+                        //std::mem::drop(display.gl_window().window());
+                        std::mem::drop(display.gl_window().window());
+                        println!("Dropped Winit Window");
+                        std::mem::drop(display.gl_window());
+                        println!("Dropped Gl Window")
+                        //std::mem::drop(display);
+                    }
+                    _ => {
+                        display.gl_window().window().request_redraw(); // TODO: ask egui if the events warrants a repaint instead
+                    }
+                }
+
+            }
             _ => (),
         }
     });
+    //display.flush();
+    //display.gl;
     println!("egui after event loop");
 }
 
