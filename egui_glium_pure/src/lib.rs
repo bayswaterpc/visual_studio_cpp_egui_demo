@@ -95,10 +95,7 @@ pub fn egui_glium_pure_example() {
                 egui.on_event(event, control_flow);
                 match control_flow {
                     glutin::event_loop::ControlFlow::Exit => {
-
                         println!("exiting");
-                        //display.gl_window().window().set_minimized(true);
-                        //std::mem::drop(display.gl_window().window());
                         std::mem::drop(display.gl_window().window());
                         println!("Dropped Winit Window");
                         std::mem::drop(display.gl_window());
@@ -109,7 +106,6 @@ pub fn egui_glium_pure_example() {
                         display.gl_window().window().request_redraw(); // TODO: ask egui if the events warrants a repaint instead
                     }
                 }
-
             }
             _ => (),
         }
