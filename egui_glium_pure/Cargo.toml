@@ -19,6 +19,7 @@ all-features = true
 glium = "0.29"
 egui = "0.12.0"
 egui_glium = "0.12.0"
+winapi = "0.3.9"
 
 [lib]
 name = "egui_glium_pure_example_lib"
