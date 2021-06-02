@@ -7,9 +7,7 @@ use winapi::{
         winuser,
     },
 };
-
 use glium::backend::glutin::glutin::platform::windows::WindowExtWindows;
-use egui_glium::EguiGlium;
 use glium::glutin::event_loop::ControlFlow;
 
 
@@ -87,6 +85,7 @@ fn redraw(egui : &mut egui_glium::EguiGlium, display: &glium::Display, control_f
     }
 }
 
+
 pub fn egui_glium_pure_example() {
     let mut event_loop = glutin::event_loop::EventLoop::with_user_event();
     let display = create_display(&&event_loop);
@@ -115,11 +114,12 @@ pub fn egui_glium_pure_example() {
     // std::mem::drop(egui);
     // std::mem::drop(event_loop);
 
-    println!("Explicit call to display h_wnd");
-    unsafe {
-        winuser::DestroyWindow(h_wnd);
-    }
+    //"Explicit call to DestroyWindow() shouldn't be necessary but isn't closing otherwise");
+    // unsafe {
+    //     winuser::DestroyWindow(h_wnd);
+    // }
 }
+
 
 #[no_mangle]
 pub extern fn egui_glium_pure_example_c_wrapper() {
