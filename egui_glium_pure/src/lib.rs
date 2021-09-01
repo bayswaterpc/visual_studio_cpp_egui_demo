@@ -110,14 +110,10 @@ pub fn egui_glium_pure_example() {
         }
     });
 
-    // std::mem::drop(display);
-    // std::mem::drop(egui);
-    // std::mem::drop(event_loop);
-
-    //"Explicit call to DestroyWindow() shouldn't be necessary but isn't closing otherwise");
-    // unsafe {
-    //     winuser::DestroyWindow(h_wnd);
-    // }
+    println!("Explicit call to DestroyWindow() shouldn't be necessary but isn't closing otherwise");
+    unsafe {
+        winuser::DestroyWindow(h_wnd);
+    }
 }
 
 
